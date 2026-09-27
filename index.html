@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECX SISTEMAS | Soluções Comerciais e Softwares Sob Medida</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="TECX SISTEMAS - Desenvolvimento de websites, sistemas comerciais sob medida com balança digital, aplicativos móveis e automação de alta performance. Transforme suas ideias em realidade digital.">
+    <meta name="keywords" content="tecx sistemas, desenvolvimento de software, criacao de sites, sistemas comerciais, balanca digital, delivery acai, l2ikarus, muikarus, papaleguas, design premium">
+    <meta name="author" content="TECX SISTEMAS">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="TECX SISTEMAS | Soluções Comerciais e Softwares sob Medida">
+    <meta property="og:description" content="Desenvolvemos softwares, sistemas comerciais com balança digital, automações e servidores com alta velocidade.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop">
+    <meta property="og:url" content="https://tecxsistemas.com.br">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="TECX SISTEMAS | Soluções Tecnológicas Premium">
+    <meta property="twitter:description" content="Transformamos ideias complexas em produtos digitais de alta performance e sofisticação visual.">
+    <meta property="twitter:image" content="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop">
+
+    <!-- Google Fonts - Sora for Headings, Inter for Body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Background Ambient Glows -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="ambient-glow glow-3"></div>
+
+    <!-- HEADER / NAVIGATION -->
+    <header class="main-header" id="header">
+        <div class="container header-container">
+            <a href="#" class="logo">
+                <span class="logo-accent">TECX</span>SISTEMAS
+            </a>
+            
+            <nav class="main-nav">
+                <a href="#inicio" class="nav-link active">Início</a>
+                <a href="#servicos" class="nav-link">Serviços</a>
+                <a href="#portfolio" class="nav-link">Portfólio</a>
+                <a href="#orcamento" class="nav-link">Orçamento</a>
+                <a href="#contato" class="nav-link">Contato</a>
+            </nav>
+
+            <div class="header-actions">
+                <a href="#orcamento" class="btn btn-primary btn-sm btn-glow">Simular Projeto</a>
+                <button class="menu-toggle" aria-label="Abrir Menu" id="menuToggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- MOBILE MENU DRAWER -->
+    <div class="mobile-drawer" id="mobileDrawer">
+        <div class="drawer-header">
+            <span class="logo"><span class="logo-accent">TECX</span>SISTEMAS</span>
+            <button class="close-btn" id="closeDrawer">&times;</button>
+        </div>
+        <nav class="drawer-nav">
+            <a href="#inicio" class="drawer-link">Início</a>
+            <a href="#servicos" class="drawer-link">Serviços</a>
+            <a href="#portfolio" class="drawer-link">Portfólio</a>
+            <a href="#orcamento" class="drawer-link">Orçamento</a>
+            <a href="#contato" class="drawer-link">Contato</a>
+            <a href="#orcamento" class="btn btn-primary btn-glow drawer-cta">Simular Projeto</a>
+        </nav>
+    </div>
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero-section" id="inicio">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <div class="badge-tech">
+                        <span class="badge-dot"></span> TECX SISTEMAS • ENGENHARIA DE SOFTWARE
+                    </div>
+                    <h1 class="hero-title">
+                        Engenharia de Software de <span class="gradient-text">Alta Performance</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Transformamos desafios analógicos e ideias inovadoras em sistemas comerciais robustos, bots inteligentes e softwares de alto impacto com excelência técnica.
+                    </p>
+                    <div class="hero-ctas">
+                        <a href="#orcamento" class="btn btn-primary btn-lg btn-glow">
+                            Fazer um Orçamento
+                            <svg class="icon-arrow" viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                        <a href="#portfolio" class="btn btn-secondary btn-lg">Conhecer Portfólio</a>
+                    </div>
+                    
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-num" id="statCode">50K+</span>
+                            <span class="stat-label">Linhas de Código</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num" id="statProjects">100%</span>
+                            <span class="stat-label">Projetos Ativos</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-num" id="statIntegrations">24/7</span>
+                            <span class="stat-label">Suporte & Monitoramento</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero-visual">
+                    <div class="visual-card glass-panel">
+                        <div class="card-header">
+                            <div class="window-dots">
+                                <span class="dot red"></span>
+                                <span class="dot yellow"></span>
+                                <span class="dot green"></span>
+                            </div>
+                            <span class="card-title-text">tecx-core.config.js</span>
+                        </div>
+                        <div class="card-body-code">
+<pre><code><span class="code-keyword">const</span> <span class="code-var">tecxSistemas</span> = {
+  name: <span class="code-string">"TECX SISTEMAS"</span>,
+  mission: <span class="code-string">"Digitalize & Automate"</span>,
+  stack: [<span class="code-string">"React"</span>, <span class="code-string">"Node.js"</span>, <span class="code-string">"Balança & Hardware"</span>, <span class="code-string">"Electron"</span>],
+  delivery: <span class="code-keyword">async</span> () => {
+    <span class="code-keyword">await</span> buildAwesomeUX();
+    <span class="code-keyword">await</span> implementScalableArchitecture();
+    <span class="code-keyword">return</span> <span class="code-string">"🚀 Sucesso do Cliente"</span>;
+  }
+};</code></pre>
+                        </div>
+                    </div>
+                    
+                    <!-- Floating visual accents -->
+                    <div class="floating-badge badge-top-right glass-panel">
+                        <div class="badge-content">
+                            <div class="badge-icon-bg bg-cyan">
+                                <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                            </div>
+                            <div>
+                                <span class="badge-title">Ultra Rápido</span>
+                                <span class="badge-subtitle">Carregamento instantâneo</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="floating-badge badge-bottom-left glass-panel">
+                        <div class="badge-content">
+                            <div class="badge-icon-bg bg-purple">
+                                <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                            </div>
+                            <div>
+                                <span class="badge-title">Seguro & Estável</span>
+                                <span class="badge-subtitle">Arquitetura blindada</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES SECTION -->
+        <section class="services-section" id="servicos">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tagline">Nossas Competências</span>
+                    <h2 class="section-title">O que Desenvolvemos na <span class="gradient-text">TECX SISTEMAS</span></h2>
+                    <p class="section-subtitle">Combinamos inteligência tecnológica e primor visual para oferecer soluções prontas para o mercado moderno.</p>
+                </div>
+
+                <div class="services-grid">
+                    <!-- Service 1 -->
+                    <div class="service-card glass-panel hover-grow">
+                        <div class="service-icon-wrapper purple-glow">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                        </div>
+                        <h3 class="service-title">Sistemas Web Sob Medida</h3>
+                        <p class="service-description">Sistemas administrativos robustos, dashboards interativos em tempo real e portais dinâmicos focados no seu modelo de negócio.</p>
+                        <ul class="service-features">
+                            <li><span class="check-icon">✓</span> Painéis Administrativos (CRUD)</li>
+                            <li><span class="check-icon">✓</span> Integrações de APIs complexas</li>
+                            <li><span class="check-icon">✓</span> Velocidade e SEO otimizados</li>
+                        </ul>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="service-card glass-panel hover-grow">
+                        <div class="service-icon-wrapper ciano-glow">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+                        </div>
+                        <h3 class="service-title">Aplicativos Mobile Premium</h3>
+                        <p class="service-description">Aplicações nativas e híbridas de alta fluidez para iOS e Android, com designs responsivos e transições cativantes.</p>
+                        <ul class="service-features">
+                            <li><span class="check-icon">✓</span> Apps iOS & Android (React Native)</li>
+                            <li><span class="check-icon">✓</span> Geolocalização e Notificações Push</li>
+                            <li><span class="check-icon">✓</span> Offline First & Sincronização</li>
+                        </ul>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="service-card glass-panel hover-grow">
+                        <div class="service-icon-wrapper green-glow">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+                        </div>
+                        <h3 class="service-title">Automação & Bots de IA</h3>
+                        <p class="service-description">Desenvolvimento de robôs integrados com WhatsApp, inteligências artificiais conversacionais e automações de fluxos comerciais.</p>
+                        <ul class="service-features">
+                            <li><span class="check-icon">✓</span> Integração oficial com OpenAI / Anthropic</li>
+                            <li><span class="check-icon">✓</span> Bots comerciais inteligentes de WhatsApp</li>
+                            <li><span class="check-icon">✓</span> Scripts automáticos de backend</li>
+                        </ul>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="service-card glass-panel hover-grow">
+                        <div class="service-icon-wrapper pink-glow">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        </div>
+                        <h3 class="service-title">Softwares Electron (Desktop)</h3>
+                        <p class="service-description">Criação de aplicativos para computadores (Windows/Mac) de alto nível, integrando sistemas de vendas e controle locais.</p>
+                        <ul class="service-features">
+                            <li><span class="check-icon">✓</span> Executáveis otimizados para Windows/Mac</li>
+                            <li><span class="check-icon">✓</span> Controle total de hardware e impressoras</li>
+                            <li><span class="check-icon">✓</span> Atualização automática incorporada</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- DYNAMIC PORTFOLIO SECTION -->
+        <section class="portfolio-section" id="portfolio">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tagline">Portfólio & Soluções Comerciais</span>
+                    <h2 class="section-title">Nossos Projetos em <span class="gradient-text">Destaque</span></h2>
+                    <p class="section-subtitle">
+                        Sistemas comerciais com pesagem e balança, plataformas SaaS de delivery, bots e servidores de jogos desenvolvidos pela <strong>TECX SISTEMAS</strong>. Clique em qualquer projeto para abrir detalhes e fotos.
+                    </p>
+                </div>
+
+                <!-- Modern Search & Filter Panel (Clean for visitors) -->
+                <div class="portfolio-controls glass-panel">
+                    <div class="control-group repo-filter-full">
+                        <div class="search-input-wrapper">
+                            <svg class="search-icon" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                            <input type="text" id="searchRepo" placeholder="Pesquisar por nome de sistema ou funcionalidade (ex: Açai, Balança, L2, Mu, SaaS)...">
+                        </div>
+                    </div>
+
+                    <div class="control-group lang-pills-wrapper">
+                        <div class="lang-pills" id="langPills">
+                            <button class="pill active" data-lang="all">Todos os Sistemas</button>
+                            <!-- Dynamic pills will be injected here -->
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Portfolio Grid Container -->
+                <div class="portfolio-grid" id="portfolioGrid">
+                    <!-- SKELETON LOADING STATE -->
+                    <div class="skeleton-card glass-panel shimmer"></div>
+                    <div class="skeleton-card glass-panel shimmer"></div>
+                    <div class="skeleton-card glass-panel shimmer"></div>
+                </div>
+
+                <!-- Load More / GitHub Direct Link -->
+                <div class="portfolio-footer text-center">
+                    <p class="github-note">Deseja conferir repositórios públicos e contribuições técnicas?</p>
+                    <a href="https://github.com/MANINtecn" target="_blank" id="githubProfileUrl" class="btn btn-secondary btn-glow">
+                        <svg class="icon-github" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.577.688.479C19.138 20.162 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                        Acessar GitHub da TECX (@MANINtecn)
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- INTERACTIVE BUDGET CALCULATOR & LEAD CAPTURE -->
+        <section class="budget-section" id="orcamento">
+            <div class="container">
+                <div class="budget-wrapper glass-panel">
+                    <div class="budget-info">
+                        <span class="section-tagline">Projetos Sob Medida</span>
+                        <h2 class="section-title">Solicite seu Orçamento</h2>
+                        <p class="budget-desc">
+                            Conte-nos o que sua empresa precisa. Selecione o modelo de solução, marque os recursos de interesse, descreva os requisitos técnicos e envie diretamente para o nosso WhatsApp para receber uma proposta técnica sob medida.
+                        </p>
+                        
+                        <div class="calculator-steps">
+                            <div class="calc-step-item">
+                                <span class="step-badge">1</span>
+                                <span class="step-text">Selecione o tipo de software</span>
+                            </div>
+                            <div class="calc-step-item">
+                                <span class="step-badge">2</span>
+                                <span class="step-text">Marque recursos necessários</span>
+                            </div>
+                            <div class="calc-step-item">
+                                <span class="step-badge">3</span>
+                                <span class="step-text">Descreva seu projeto e envie no WhatsApp</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="budget-calculator" id="budgetCalculator">
+                        <!-- Project Type Selector (Sem preços) -->
+                        <div class="calc-group">
+                            <label class="calc-label">Qual o tipo de solução?</label>
+                            <div class="project-types-grid">
+                                <div class="type-card active" data-value="custom_system">
+                                    <span class="type-name">Sistema Web / Painel Sob Medida</span>
+                                </div>
+                                <div class="type-card" data-value="delivery_balanca">
+                                    <span class="type-name">Delivery & Balança Digital / Caixa</span>
+                                </div>
+                                <div class="type-card" data-value="mobile_app">
+                                    <span class="type-name">Aplicativo Mobile (iOS & Android)</span>
+                                </div>
+                                <div class="type-card" data-value="automation_bot">
+                                    <span class="type-name">Robô de WhatsApp & Automações</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Integrations Checkboxes -->
+                        <div class="calc-group">
+                            <label class="calc-label">Recursos de Interesse (Opcionais):</label>
+                            <div class="addons-grid">
+                                <label class="addon-checkbox-label glass-panel">
+                                    <input type="checkbox" class="addon-checkbox" value="Balança Digital (Leitura de Peso)">
+                                    <span class="addon-name">Integração com Balança Digital</span>
+                                </label>
+                                <label class="addon-checkbox-label glass-panel">
+                                    <input type="checkbox" class="addon-checkbox" value="Impressão Térmica de Comandas">
+                                    <span class="addon-name">Impressão Térmica de Comandas</span>
+                                </label>
+                                <label class="addon-checkbox-label glass-panel">
+                                    <input type="checkbox" class="addon-checkbox" value="Pagamentos Pix Automático">
+                                    <span class="addon-name">Pagamentos via Pix / Cartão</span>
+                                </label>
+                                <label class="addon-checkbox-label glass-panel">
+                                    <input type="checkbox" class="addon-checkbox" value="Controle de Usuários / Login">
+                                    <span class="addon-name">Painel Admin com Níveis de Acesso</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Project Requirements Textarea -->
+                        <div class="calc-group">
+                            <label class="calc-label" for="projectDescriptionInput">Descreva o que você precisa no seu sistema: *</label>
+                            <textarea id="projectDescriptionInput" class="form-input" rows="4" placeholder="Ex: Preciso de um aplicativo para meu estabelecimento comercial integrado com balança de açaí, cálculo automático por grama e envio das comandas para a cozinha e caixa..." style="width: 100%; border-radius: var(--border-radius-md); padding: 14px; font-size: 0.95rem; resize: vertical;"></textarea>
+                        </div>
+
+                        <!-- WhatsApp Submission Action Form -->
+                        <div class="budget-result-panel glass-panel" style="padding: 24px;">
+                            <div class="calculator-actions" style="display: flex; flex-direction: column; gap: 14px;">
+                                <input type="text" id="clientName" placeholder="Seu Nome ou da sua Empresa *" class="calc-input" style="width: 100%;">
+                                <button id="btnSendWhatsapp" class="btn btn-primary btn-glow btn-block" style="padding: 16px;">
+                                    <svg class="icon-whatsapp" width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.5-5.739-1.446L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.42 9.864-9.864.002-2.637-1.03-5.114-2.903-6.989-1.873-1.873-4.351-2.903-6.99-2.905-5.442 0-9.87 4.42-9.874 9.86-.001 1.748.473 3.456 1.378 4.969L1.925 21.647l5.986-1.569c.003-.002.003-.002.003-.002zm12.366-7.41c-.327-.163-1.924-.949-2.217-1.055-.293-.105-.507-.157-.719.163-.213.32-.821 1.055-1.007 1.266-.187.21-.373.237-.7.074-.326-.163-1.379-.508-2.625-1.62-1.026-.914-1.719-2.043-1.92-2.37-.201-.326-.021-.502.142-.663.147-.145.327-.379.49-.569.163-.19.217-.326.326-.543.11-.217.055-.407-.027-.57-.082-.163-.718-1.727-.984-2.37-.26-.624-.523-.538-.72-.548-.18-.01-.387-.01-.594-.01s-.54.077-.822.387c-.282.31-1.077 1.051-1.077 2.562 0 1.511 1.099 2.973 1.252 3.178.153.204 2.164 3.31 5.242 4.643.732.316 1.303.505 1.748.647.736.233 1.408.2 1.938.12.59-.09 1.925-.788 2.197-1.509.272-.72.272-1.336.192-1.464-.08-.128-.293-.21-.62-.373z"/></svg>
+                                    Enviar Especificações no WhatsApp
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section class="contact-section" id="contato">
+            <div class="container">
+                <div class="section-header text-center">
+                    <span class="section-tagline">Contate Nossos Engenheiros</span>
+                    <h2 class="section-title">Estamos Prontos para <span class="gradient-text">Conversar</span></h2>
+                    <p class="section-subtitle">Tem alguma dúvida técnica ou precisa de uma análise focada para sua empresa? Entre em contato agora.</p>
+                </div>
+
+                <div class="contact-grid">
+                    <!-- Contact Cards -->
+                    <div class="contact-info-cards">
+                        <div class="contact-item-card glass-panel">
+                            <div class="contact-icon-bg purple">
+                                <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                            </div>
+                            <div>
+                                <h4 class="contact-card-title">Envie um E-mail</h4>
+                                <a href="mailto:contato@tecxsistemas.com.br" class="contact-card-link">contato@tecxsistemas.com.br</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item-card glass-panel">
+                            <div class="contact-icon-bg ciano">
+                                <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+                            </div>
+                            <div>
+                                <h4 class="contact-card-title">Fale Conosco Direct</h4>
+                                <a href="https://wa.me/5511999999999" target="_blank" class="contact-card-link" id="directWhatsapp">+55 (11) 99999-9999</a>
+                            </div>
+                        </div>
+
+                        <div class="contact-item-card glass-panel">
+                            <div class="contact-icon-bg green">
+                                <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                            </div>
+                            <div>
+                                <h4 class="contact-card-title">Nossa Sede</h4>
+                                <span class="contact-card-link text-dimmed">São Paulo - SP, Brasil</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modern Glass Contact Form -->
+                    <div class="contact-form-panel glass-panel">
+                        <form id="contactForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="formName" class="form-label">Nome Completo</label>
+                                    <input type="text" id="formName" class="form-input" placeholder="Seu nome" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="formEmail" class="form-label">E-mail Profissional</label>
+                                    <input type="email" id="formEmail" class="form-input" placeholder="seu@email.com" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="formSubject" class="form-label">Assunto</label>
+                                <input type="text" id="formSubject" class="form-input" placeholder="Qual o motivo do contato?" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="formMessage" class="form-label">Mensagem detalhada</label>
+                                <textarea id="formMessage" class="form-input" rows="4" placeholder="Descreva sucintamente sua necessidade técnica..." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-glow btn-block">Enviar Mensagem</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand-column">
+                <span class="logo footer-logo"><span class="logo-accent">TECX</span>SISTEMAS</span>
+                <p class="footer-desc">TECX SISTEMAS é focada em engenharia de software comercial, automações com balança digital, plataformas SaaS de delivery e servidores de alta concorrência.</p>
+                <div class="social-row">
+                    <a href="https://github.com/MANINtecn" target="_blank" class="social-link" aria-label="Github Link">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.577.688.479C19.138 20.162 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-links-column">
+                <h4 class="footer-title">Navegação</h4>
+                <a href="#inicio" class="footer-link">Início</a>
+                <a href="#servicos" class="footer-link">Serviços</a>
+                <a href="#portfolio" class="footer-link">Portfólio</a>
+                <a href="#orcamento" class="footer-link">Orçamento</a>
+            </div>
+
+            <div class="footer-links-column">
+                <h4 class="footer-title">Soluções</h4>
+                <span class="footer-static-item">Açaí & Balança Digital</span>
+                <span class="footer-static-item">Plataformas de Delivery</span>
+                <span class="footer-static-item">Servidores & Mods C++</span>
+                <span class="footer-static-item">E-commerce & Catálogos</span>
+            </div>
+
+            <div class="footer-links-column">
+                <h4 class="footer-title">Atendimento</h4>
+                <span class="footer-static-item">Segunda a Sexta</span>
+                <span class="footer-static-item">09h às 18h (Brasília)</span>
+                <span class="footer-static-item" style="color: var(--color-green); font-size: 0.8rem; margin-top: 6px;">● Suporte 24/7 Ativo</span>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container footer-bottom-container">
+                <p class="copyright">&copy; 2026 TECX SISTEMAS. Todos os direitos reservados. <span id="secretAdminTrigger" title="Acesso Restrito" style="cursor: pointer; opacity: 0.1; user-select: none;">🔒</span></p>
+                <p class="designer">Engenharia de Software sob medida.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ======================================================================
+         MODAL 1: DETALHES COMPLETOS DO PROJETO (CLICÁVEL - SEM EMOJIS)
+         ====================================================================== -->
+    <div class="modal-overlay" id="projectModalOverlay">
+        <div class="project-modal glass-panel" id="projectModal">
+            <button class="modal-close" id="closeProjectModal" aria-label="Fechar Modal">&times;</button>
+            <div class="modal-cover-wrapper" id="modalCoverWrapper">
+                <img src="" alt="Capa do Sistema" id="modalCoverImg" class="modal-cover-img" style="display: none;">
+                <div class="modal-cover-gradient" id="modalCoverGradient"></div>
+                <div class="modal-cover-badge" id="modalCoverBadge">Delivery & Balança</div>
+            </div>
+            <div class="modal-body">
+                <div class="modal-header-meta">
+                    <div>
+                        <h2 class="modal-title" id="modalTitle">Nome do Projeto</h2>
+                        <span class="modal-category" id="modalCategory">Categoria do Sistema</span>
+                    </div>
+                    <div class="modal-status-badge" id="modalStatus">Em Produção</div>
+                </div>
+                
+                <p class="modal-description" id="modalDescription"></p>
+                
+                <div class="modal-highlights" id="modalHighlightsWrapper">
+                    <h4 class="modal-section-title">Principais Recursos & Diferenciais</h4>
+                    <ul class="modal-highlights-list" id="modalHighlightsList"></ul>
+                </div>
+
+                <div class="modal-tech-stack">
+                    <h4 class="modal-section-title">Tecnologias Empregadas</h4>
+                    <div class="modal-tags" id="modalTechTags"></div>
+                </div>
+
+                <div class="modal-actions">
+                    <a href="#" target="_blank" id="modalWhatsappCta" class="btn btn-primary btn-glow">
+                        <svg class="icon-whatsapp" width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.5-5.739-1.446L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.42 9.864-9.864.002-2.637-1.03-5.114-2.903-6.989-1.873-1.873-4.351-2.903-6.99-2.905-5.442 0-9.87 4.42-9.874 9.86-.001 1.748.473 3.456 1.378 4.969L1.925 21.647l5.986-1.569c.003-.002.003-.002.003-.002zm12.366-7.41c-.327-.163-1.924-.949-2.217-1.055-.293-.105-.507-.157-.719.163-.213.32-.821 1.055-1.007 1.266-.187.21-.373.237-.7.074-.326-.163-1.379-.508-2.625-1.62-1.026-.914-1.719-2.043-1.92-2.37-.201-.326-.021-.502.142-.663.147-.145.327-.379.49-.569.163-.19.217-.326.326-.543.11-.217.055-.407-.027-.57-.082-.163-.718-1.727-.984-2.37-.26-.624-.523-.538-.72-.548-.18-.01-.387-.01-.594-.01s-.54.077-.822.387c-.282.31-1.077 1.051-1.077 2.562 0 1.511 1.099 2.973 1.252 3.178.153.204 2.164 3.31 5.242 4.643.732.316 1.303.505 1.748.647.736.233 1.408.2 1.938.12.59-.09 1.925-.788 2.197-1.509.272-.72.272-1.336.192-1.464-.08-.128-.293-.21-.62-.373z"/></svg>
+                        Solicitar Sistema Semelhante
+                    </a>
+                    <a href="#" target="_blank" id="modalGithubLink" class="btn btn-secondary">
+                        <svg class="icon-github" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" clip-rule="evenodd" d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.577.688.479C19.138 20.162 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+                        Ver no GitHub
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ======================================================================
+         MODAL 2: PAINEL DE GESTÃO DO PORTFÓLIO (SUPER ADMIN - ACESSO RESTRITO)
+         ====================================================================== -->
+    <div class="modal-overlay" id="adminModalOverlay">
+        <div class="admin-modal glass-panel" id="adminModal">
+            <div class="admin-header">
+                <div class="admin-header-title">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                    <span>Área Restrita • TECX SISTEMAS</span>
+                </div>
+                <button class="modal-close" id="closeAdminModal" aria-label="Fechar Modal">&times;</button>
+            </div>
+
+            <!-- Login Step (if not logged in) -->
+            <div class="admin-auth-view" id="adminAuthView">
+                <div class="admin-auth-badge">ACESSO RESTRITO</div>
+                <h3 class="admin-auth-heading">Painel de Controle TECX</h3>
+                <p class="admin-auth-desc">Faça login com sua Conta Google autorizada ou credenciais de administrador para gerenciar projetos, fotos e descrições do site.</p>
+                
+                <!-- Google Sign In Button -->
+                <div class="google-auth-container">
+                    <button type="button" id="btnGoogleSignIn" class="btn-google-auth">
+                        <svg width="20" height="20" viewBox="0 0 24 24"><path fill="#4285F4" d="M23.745 12.27c0-.7-.06-1.4-.19-2.07H12v4.51h6.6c-.29 1.52-1.14 2.82-2.4 3.68v3.05h3.88c2.27-2.09 3.66-5.17 3.66-9.17z"/><path fill="#34A853" d="M12 24c3.24 0 5.95-1.08 7.93-2.91l-3.88-3.05c-1.08.72-2.45 1.16-4.05 1.16-3.12 0-5.77-2.1-6.72-4.93H1.25v3.15C3.26 21.36 7.36 24 12 24z"/><path fill="#FBBC05" d="M5.28 14.27c-.25-.72-.38-1.49-.38-2.27s.13-1.55.38-2.27V6.58H1.25C.45 8.18 0 9.98 0 12s.45 3.82 1.25 5.42l4.03-3.15z"/><path fill="#EA4335" d="M12 4.75c1.77 0 3.35.61 4.6 1.8l3.42-3.42C17.95 1.19 15.24 0 12 0 7.36 0 3.26 2.64 1.25 6.58l4.03 3.15c.95-2.83 3.6-4.98 6.72-4.98z"/></svg>
+                        <span>Entrar com Conta Google</span>
+                    </button>
+                </div>
+
+                <div class="auth-divider"><span>ou credenciais de administrador</span></div>
+
+                <form id="adminCredentialsForm" class="admin-credentials-form">
+                    <div class="form-group" style="text-align: left;">
+                        <label class="form-label" style="font-size: 0.8rem;">Usuário</label>
+                        <input type="text" id="adminUserInput" class="form-input" placeholder="Usuário cadastrado" autocomplete="username" required>
+                    </div>
+                    <div class="form-group" style="text-align: left;">
+                        <label class="form-label" style="font-size: 0.8rem;">Senha</label>
+                        <input type="password" id="adminPassInput" class="form-input" placeholder="Senha de segurança" autocomplete="current-password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-glow btn-block" style="margin-top: 10px;">Acessar Painel</button>
+                </form>
+                <p class="admin-error-text" id="adminAuthError" style="display:none; color: #ef4444; font-size: 0.85rem; margin-top: 12px;"></p>
+            </div>
+
+            <!-- Dashboard View (when logged in) -->
+            <div class="admin-dashboard-view" id="adminDashboardView" style="display:none;">
+                <div class="admin-user-bar">
+                    <div class="admin-user-profile">
+                        <div class="admin-avatar" id="adminAvatar">AD</div>
+                        <div>
+                            <span class="admin-username" id="adminDisplayName">Super Admin</span>
+                            <span class="admin-role">TECX SISTEMAS • Gestão Master</span>
+                        </div>
+                    </div>
+                    <button id="btnAdminLogout" class="btn btn-secondary btn-sm">Sair</button>
+                </div>
+
+                <div class="admin-tabs">
+                    <button class="admin-tab active" data-tab="visibilityTab">Projetos & Fotos Reais</button>
+                    <button class="admin-tab" data-tab="siteSettingsTab">WhatsApp & Contato</button>
+                    <button class="admin-tab" data-tab="newProjectTab">+ Novo Projeto Manual</button>
+                    <button class="admin-tab" data-tab="securityTab">Segurança & Senhas</button>
+                </div>
+
+                <!-- Tab 1: Project Management (Edit Title, Description, Image Upload & Visibility) -->
+                <div class="admin-tab-content active" id="visibilityTab">
+                    <div class="admin-tab-actions">
+                        <p class="admin-tab-help">Marque quais sistemas do GitHub mostrar, edite seus títulos, descrições e suba fotos reais do sistema.</p>
+                        <button id="btnSyncGithub" class="btn btn-primary btn-sm">🔄 Sincronizar com GitHub</button>
+                    </div>
+                    <div class="admin-projects-list" id="adminProjectsList">
+                        <!-- Dynamic items with full editing controls -->
+                    </div>
+                </div>
+
+                <!-- Tab: WhatsApp & Contato Configs -->
+                <div class="admin-tab-content" id="siteSettingsTab">
+                    <div class="security-panel glass-panel" style="padding: 24px;">
+                        <h4 style="margin-bottom: 8px;">Configuração do WhatsApp & Contatos</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 20px;">
+                            Defina o seu número de WhatsApp. Todos os botões do site ("Fazer Orçamento", "Falar no WhatsApp", "Solicitar Sistema" e "Enviar Especificações") serão direcionados diretamente para o seu número configurado aqui!
+                        </p>
+                        <form id="siteSettingsForm" class="admin-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label" for="settingWhatsapp">Seu Número de WhatsApp (com DDD) *</label>
+                                    <input type="text" id="settingWhatsapp" class="form-input" placeholder="Ex: 5511999999999 ou (11) 99999-9999" required>
+                                    <span style="font-size: 0.75rem; color: var(--text-muted); display: block; margin-top: 4px;">Pode digitar com ou sem DDD/código do país; o sistema cuidará da formatação para envio do WhatsApp.</span>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="settingEmail">E-mail Comercial de Contato</label>
+                                    <input type="email" id="settingEmail" class="form-input" placeholder="Ex: contato@tecxsistemas.com.br" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="settingAddress">Localização / Cidade</label>
+                                <input type="text" id="settingAddress" class="form-input" placeholder="Ex: São Paulo - SP, Brasil">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label" for="settingDefaultMsg">Mensagem Padrão do Botão Geral de WhatsApp</label>
+                                <input type="text" id="settingDefaultMsg" class="form-input" placeholder="Ex: Olá TECX SISTEMAS! Gostaria de tirar dúvidas sobre desenvolvimento de sistemas.">
+                            </div>
+                            <div style="display: flex; gap: 12px; align-items: center; margin-top: 14px;">
+                                <button type="submit" class="btn btn-primary btn-glow">Salvar Configurações de Contato</button>
+                                <span id="siteSettingsSavedFeedback" style="display: none; color: #10b981; font-size: 0.85rem; font-weight: 500;">✓ Salvo com sucesso! Links atualizados.</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Tab 2: New Custom Project Form -->
+                <div class="admin-tab-content" id="newProjectTab">
+                    <form id="newProjectForm" class="admin-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Nome do Sistema / Projeto *</label>
+                                <input type="text" id="newProjName" class="form-input" placeholder="Ex: Papaléguas Delivery" required>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Categoria Comercial *</label>
+                                <input type="text" id="newProjCategory" class="form-input" placeholder="Ex: Delivery & Automação Comercial" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Descrição Comercial Completa *</label>
+                            <textarea id="newProjDesc" class="form-input" rows="3" placeholder="Descreva os recursos reais, balança, comanda, WhatsApp, etc..." required></textarea>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Tecnologias (separadas por vírgula)</label>
+                                <input type="text" id="newProjTechs" class="form-input" placeholder="TypeScript, React, Node.js, PostgreSQL">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Recursos-chave (separados por vírgula)</label>
+                                <input type="text" id="newProjHighlights" class="form-input" placeholder="Balança Digital, Impressão Térmica, WhatsApp">
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label class="form-label">Status do Projeto</label>
+                                <select id="newProjStatus" class="form-input">
+                                    <option value="Em Produção">Em Produção</option>
+                                    <option value="Ativo">Ativo</option>
+                                    <option value="SaaS">SaaS</option>
+                                    <option value="Exclusivo">Exclusivo</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Upload de Foto / Print do Sistema</label>
+                                <input type="file" id="newProjImageFile" class="form-input" accept="image/*">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Ou URL Direta da Foto (opcional)</label>
+                            <input type="url" id="newProjImageUrl" class="form-input" placeholder="https://...">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-glow" style="margin-top: 10px;">Cadastrar e Exibir no Portfólio</button>
+                    </form>
+                </div>
+
+                <!-- Tab 3: Security & Credentials -->
+                <div class="admin-tab-content" id="securityTab">
+                    <div class="security-panel glass-panel" style="padding: 24px;">
+                        <h4 style="margin-bottom: 8px;">Credenciais Master</h4>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 20px;">Altere o login e senha master do painel para o usuário que desejar:</p>
+                        <form id="changeCredentialsForm" class="admin-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label class="form-label">Novo Usuário Master</label>
+                                    <input type="text" id="changeUser" class="form-input" placeholder="Ex: admin" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Nova Senha Master</label>
+                                    <input type="password" id="changePass" class="form-input" placeholder="Ex: sua_senha_forte" required>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-sm">Salvar Novas Credenciais</button>
+                        </form>
+                        
+                        <hr style="margin: 24px 0; border: none; border-top: 1px solid var(--border-color);">
+                        
+                        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px;">
+                            <div>
+                                <span style="font-size: 0.9rem; font-weight: 600; display: block;">Restaurar Portfólio</span>
+                                <span style="font-size: 0.8rem; color: var(--text-muted);">Redefine os projetos para a configuração de fábrica.</span>
+                            </div>
+                            <button id="btnResetDefaults" class="btn-text">Restaurar Padrão</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- App Logic Script -->
+    <script src="app.js"></script>
+</body>
+</html>
