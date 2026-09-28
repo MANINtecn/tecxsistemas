@@ -118,56 +118,6 @@
                         </div>
                     </div>
                 </div>
-
-                <div class="hero-visual">
-                    <div class="visual-card glass-panel">
-                        <div class="card-header">
-                            <div class="window-dots">
-                                <span class="dot red"></span>
-                                <span class="dot yellow"></span>
-                                <span class="dot green"></span>
-                            </div>
-                            <span class="card-title-text">tecx-core.config.js</span>
-                        </div>
-                        <div class="card-body-code">
-<pre><code><span class="code-keyword">const</span> <span class="code-var">tecxSistemas</span> = {
-  name: <span class="code-string">"TECX SISTEMAS"</span>,
-  mission: <span class="code-string">"Digitalize & Automate"</span>,
-  stack: [<span class="code-string">"React"</span>, <span class="code-string">"Node.js"</span>, <span class="code-string">"Balança & Hardware"</span>, <span class="code-string">"Electron"</span>],
-  delivery: <span class="code-keyword">async</span> () => {
-    <span class="code-keyword">await</span> buildAwesomeUX();
-    <span class="code-keyword">await</span> implementScalableArchitecture();
-    <span class="code-keyword">return</span> <span class="code-string">"🚀 Sucesso do Cliente"</span>;
-  }
-};</code></pre>
-                        </div>
-                    </div>
-                    
-                    <!-- Floating visual accents -->
-                    <div class="floating-badge badge-top-right glass-panel">
-                        <div class="badge-content">
-                            <div class="badge-icon-bg bg-cyan">
-                                <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-                            </div>
-                            <div>
-                                <span class="badge-title">Ultra Rápido</span>
-                                <span class="badge-subtitle">Carregamento instantâneo</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="floating-badge badge-bottom-left glass-panel">
-                        <div class="badge-content">
-                            <div class="badge-icon-bg bg-purple">
-                                <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
-                            </div>
-                            <div>
-                                <span class="badge-title">Seguro & Estável</span>
-                                <span class="badge-subtitle">Arquitetura blindada</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
             </div>
         </section>
 
@@ -251,27 +201,9 @@
                     </p>
                 </div>
 
-                <!-- Modern Search & Filter Panel (Clean for visitors) -->
-                <div class="portfolio-controls glass-panel">
-                    <div class="control-group repo-filter-full">
-                        <div class="search-input-wrapper">
-                            <svg class="search-icon" width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                            <input type="text" id="searchRepo" placeholder="Pesquisar por nome de sistema ou funcionalidade (ex: Açai, Balança, L2, Mu, SaaS)...">
-                        </div>
-                    </div>
-
-                    <div class="control-group lang-pills-wrapper">
-                        <div class="lang-pills" id="langPills">
-                            <button class="pill active" data-lang="all">Todos os Sistemas</button>
-                            <!-- Dynamic pills will be injected here -->
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Portfolio Grid Container -->
+                <!-- Portfolio Showcase Container -->
                 <div class="portfolio-grid" id="portfolioGrid">
                     <!-- SKELETON LOADING STATE -->
-                    <div class="skeleton-card glass-panel shimmer"></div>
                     <div class="skeleton-card glass-panel shimmer"></div>
                     <div class="skeleton-card glass-panel shimmer"></div>
                 </div>
@@ -498,21 +430,29 @@
     </footer>
 
     <!-- ======================================================================
-         MODAL 1: DETALHES COMPLETOS DO PROJETO (CLICÁVEL - SEM EMOJIS)
+         MODAL 1: DETALHES COMPLETOS DO PROJETO (SPLIT SCREEN - FOTO REAL INTEIRA)
          ====================================================================== -->
     <div class="modal-overlay" id="projectModalOverlay">
-        <div class="project-modal glass-panel" id="projectModal">
+        <div class="project-modal glass-panel split-modal" id="projectModal">
             <button class="modal-close" id="closeProjectModal" aria-label="Fechar Modal">&times;</button>
-            <div class="modal-cover-wrapper" id="modalCoverWrapper">
-                <img src="" alt="Capa do Sistema" id="modalCoverImg" class="modal-cover-img" style="display: none;">
-                <div class="modal-cover-gradient" id="modalCoverGradient"></div>
-                <div class="modal-cover-badge" id="modalCoverBadge">Delivery & Balança</div>
+            
+            <!-- Coluna 1: Foto Real Inteira do Sistema (Sem Cortes / Full Screenshot) -->
+            <div class="modal-media-col" id="modalMediaCol">
+                <div class="modal-photo-stage">
+                    <img src="" alt="Tela do Sistema" id="modalCoverImg" class="modal-cover-img" style="display: none;">
+                    <div class="modal-cover-placeholder" id="modalCoverGradient">
+                        <span class="placeholder-tech-badge" id="modalCoverBadge">Delivery & Balança</span>
+                        <span class="placeholder-status-text">TECX SISTEMAS • Em Produção</span>
+                    </div>
+                </div>
             </div>
+
+            <!-- Coluna 2: Informações Comerciais & Contato -->
             <div class="modal-body">
                 <div class="modal-header-meta">
                     <div>
-                        <h2 class="modal-title" id="modalTitle">Nome do Projeto</h2>
                         <span class="modal-category" id="modalCategory">Categoria do Sistema</span>
+                        <h2 class="modal-title" id="modalTitle">Nome do Projeto</h2>
                     </div>
                     <div class="modal-status-badge" id="modalStatus">Em Produção</div>
                 </div>

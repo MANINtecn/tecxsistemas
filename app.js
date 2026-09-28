@@ -185,7 +185,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 'pedeaki',
             name: 'PedeAki — Plataforma SaaS de Cardápio & Delivery',
             category: 'SaaS & Delivery',
-            status: 'SaaS Ativo',
+            status: 'Em Produção',
             description: 'Plataforma multi-loja de cardápio digital interativo e gestão de delivery para restaurantes, hamburguerias e lanchonetes. Os clientes montam o pedido com rapidez e enviam direto no WhatsApp com taxas calculadas por bairro e suporte a cupons.',
             image: '',
             highlights: [
@@ -218,7 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 'l2ikarus',
             name: 'L2 Ikarus — Portal & Launcher Lineage 2',
             category: 'Web & Launcher',
-            status: 'Ativo',
+            status: 'Em Produção',
             description: 'Portal web completo e Launcher executável para servidores de Lineage 2. Integrado com sistema de download e atualização automática de patchs, estatísticas ao vivo de jogadores conectados e rankings.',
             image: '',
             highlights: [
@@ -235,7 +235,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 'l2jikarus-voice-mod',
             name: 'L2 Jikarus Voice Mod — Voz por Proximidade 3D',
             category: 'Engenharia C++ & Mods',
-            status: 'Exclusivo',
+            status: 'Em Produção',
             description: 'Módulo de áudio espacial 3D embutido no client do jogo Lineage 2. Os jogadores conversam por voz posicional sem abrir nenhum software extra, com cálculo de distância e volume atenuado pelo motor gráfico.',
             image: '',
             highlights: [
@@ -252,7 +252,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 'l2jikarus',
             name: 'L2 Jikarus — GameServer Java Customizado',
             category: 'Game Server & Java',
-            status: 'Ativo',
+            status: 'Em Produção',
             description: 'GameServer customizado de alta fidelidade para Lineage 2 Interlude em Java. Estrutura multithread reforçada para aguentar centenas de jogadores simultâneos sem travamentos ou vulnerabilidades.',
             image: '',
             highlights: [
@@ -269,7 +269,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 'muikarus',
             name: 'Mu Ikarus — Servidor Mu Online & Launcher',
             category: 'Game Server & C#',
-            status: 'Ativo',
+            status: 'Em Produção',
             description: 'Ecossistema completo para Mu Online, trazendo launcher exclusivo em C# com verificador de arquivos anti-cheat e servidor customizado com eventos automatizados.',
             image: '',
             highlights: [
@@ -286,7 +286,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 'centroesteticotoledo',
             name: 'Centro Estético Toledo — Gestão & Agendamentos',
             category: 'Sistemas Web',
-            status: 'Ativo',
+            status: 'Em Produção',
             description: 'Plataforma web de agendamento online e gestão clínica para centro estético. Agendamento 24h pelos clientes, confirmações automáticas e prontuário estético simplificado.',
             image: '',
             highlights: [
@@ -303,7 +303,7 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 'l2interlude-sync',
             name: 'L2 Interlude Sync',
             category: 'Infraestrutura Interna',
-            status: 'Interno',
+            status: 'Em Produção',
             description: 'Módulo de sincronização interna para servidores e VPS.',
             image: '',
             highlights: ['Sincronização de arquivos da VPS'],
@@ -319,11 +319,11 @@ document.addEventListener('DOMContentLoaded', () => {
             if (saved) {
                 const parsed = JSON.parse(saved);
                 if (Array.isArray(parsed) && parsed.length > 0) {
-                    // Limpa resíduos de shopgol ou emojis caso existam de versões antigas
                     return parsed
                         .filter(p => p.id !== 'shopgol')
                         .map(p => {
                             delete p.icon; // Remove emojis
+                            p.status = 'Em Produção'; // Todos com selo Em Produção conforme solicitado!
                             return p;
                         });
                 }
@@ -341,63 +341,26 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ----------------------------------------------------------------------
-    // 4. RENDERIZAÇÃO DO PORTFÓLIO PÚBLICO
+    // 4. RENDERIZAÇÃO DO PORTFÓLIO PÚBLICO (SHOWCASE COM FOTOS REAIS INTEIRAS)
     // ----------------------------------------------------------------------
     const portfolioGrid = document.getElementById('portfolioGrid');
-    const searchRepoInput = document.getElementById('searchRepo');
-    const langPillsContainer = document.getElementById('langPills');
-    let activeFilter = 'all';
 
     function generateCategoryPills() {
-        if (!langPillsContainer) return;
-        const categories = new Set();
-        allProjects.filter(p => p.visible).forEach(p => {
-            if (p.category) categories.add(p.category);
-        });
-
-        langPillsContainer.innerHTML = `<button class="pill ${activeFilter === 'all' ? 'active' : ''}" data-filter="all">Todos os Sistemas</button>`;
-        
-        categories.forEach(cat => {
-            const btn = document.createElement('button');
-            btn.className = `pill ${activeFilter === cat ? 'active' : ''}`;
-            btn.dataset.filter = cat;
-            btn.textContent = cat;
-            langPillsContainer.appendChild(btn);
-        });
-
-        langPillsContainer.querySelectorAll('.pill').forEach(pill => {
-            pill.addEventListener('click', () => {
-                langPillsContainer.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
-                pill.classList.add('active');
-                activeFilter = pill.dataset.filter;
-                renderPortfolio();
-            });
-        });
+        // Função mantida como no-op para compatibilidade interna
     }
 
     function renderPortfolio() {
         if (!portfolioGrid) return;
-        const searchQuery = searchRepoInput ? searchRepoInput.value.toLowerCase().trim() : '';
         
-        const filtered = allProjects.filter(project => {
-            if (!project.visible) return false;
-
-            const matchesSearch = project.name.toLowerCase().includes(searchQuery) ||
-                                 (project.category && project.category.toLowerCase().includes(searchQuery)) ||
-                                 (project.description && project.description.toLowerCase().includes(searchQuery)) ||
-                                 (project.techs && project.techs.some(t => t.toLowerCase().includes(searchQuery)));
-            
-            const matchesCat = activeFilter === 'all' || project.category === activeFilter;
-            
-            return matchesSearch && matchesCat;
-        });
+        // Exibe apenas os projetos habilitados pelo administrador
+        const filtered = allProjects.filter(project => project.visible);
 
         if (filtered.length === 0) {
             portfolioGrid.innerHTML = `
-                <div class="glass-panel text-center" style="grid-column: 1 / -1; padding: 50px 20px;">
-                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin: 0 auto 12px; display: block; color: var(--text-muted);"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                    <h4 style="margin-bottom: 8px;">Nenhum sistema encontrado</h4>
-                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Tente pesquisar com outro termo ou selecione a categoria "Todos os Sistemas".</p>
+                <div class="glass-panel text-center" style="padding: 60px 20px;">
+                    <svg width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" style="margin: 0 auto 14px; display: block; color: var(--color-ciano);"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                    <h4 style="margin-bottom: 8px; font-size: 1.2rem;">Nenhum sistema visível no momento</h4>
+                    <p style="color: var(--text-secondary); font-size: 0.92rem;">Acesse o painel administrativo para marcar os projetos que deseja exibir no site.</p>
                 </div>
             `;
             return;
@@ -407,48 +370,86 @@ document.addEventListener('DOMContentLoaded', () => {
 
         filtered.forEach(project => {
             const card = document.createElement('div');
-            card.className = 'portfolio-card glass-panel hover-grow';
+            card.className = 'portfolio-showcase-card glass-panel hover-grow';
             card.dataset.projectId = project.id;
 
-            const techTagsHtml = (project.techs || []).slice(0, 3).map(tech => 
+            const techTagsHtml = (project.techs || []).slice(0, 5).map(tech => 
                 `<span class="tech-tag-sm">${tech}</span>`
             ).join('');
 
-            // Capa visual: se tiver imagem real salva, renderiza a imagem; caso contrário, renderiza preview wireframe limpo
-            const coverHtml = project.image 
-                ? `<img src="${project.image}" alt="${project.name}" class="card-cover-img">`
-                : `<div class="card-cover-empty"><span class="empty-tag">${project.category || 'SISTEMA TECX'}</span></div>`;
+            const highlightsHtml = (project.highlights || []).slice(0, 3).map(h => 
+                `<li><span class="check">✓</span> <span>${h}</span></li>`
+            ).join('');
+
+            // Mídia: exibe a foto real integral do app/software (celular ou desktop) sem nenhum corte!
+            const mediaHtml = project.image 
+                ? `<img src="${project.image}" alt="${project.name}" class="showcase-full-img">`
+                : `
+                    <div class="showcase-media-placeholder">
+                        <div class="empty-device-frame">
+                            <svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" style="color: var(--color-ciano);"><rect x="5" y="2" width="14" height="20" rx="3"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+                            <span style="font-size: 0.72rem; color: var(--text-muted); font-weight: 600;">APP TECX</span>
+                        </div>
+                        <span class="card-category-badge">${project.category || 'Sistema Comercial'}</span>
+                    </div>
+                  `;
+
+            const waCustomMsg = `Olá TECX SISTEMAS! Vi o sistema *${project.name}* no site e gostaria de solicitar um orçamento para uma solução semelhante para o meu negócio.`;
 
             card.innerHTML = `
-                <div class="card-cover">
-                    ${coverHtml}
-                    <div class="card-cover-overlay"></div>
-                    <div class="card-cover-badges">
-                        <span class="card-category-badge">${project.category || 'Sistema'}</span>
+                <!-- Coluna Esquerda: Foto Real Inteira do Sistema -->
+                <div class="showcase-media-stage" title="Clique para ver a foto real em tela cheia">
+                    ${mediaHtml}
+                    <div class="showcase-badge-overlay">
                         <span class="card-status-badge">
                             <span class="badge-dot" style="background-color: #10b981; box-shadow: none;"></span>
-                            ${project.status || 'Ativo'}
+                            Em Produção
                         </span>
+                    </div>
+                    <div class="showcase-zoom-hint">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                        Ver Tela Cheia
                     </div>
                 </div>
 
-                <div class="card-content">
-                    <h3 class="repo-card-title">${project.name}</h3>
-                    <p class="repo-card-desc">${project.description}</p>
-                    
-                    <div class="repo-meta">
-                        <div class="repo-tech-tags">
-                            ${techTagsHtml}
-                        </div>
-                        <span class="repo-action-view">
-                            Ver Detalhes 
-                            <svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                <!-- Coluna Direita: Especificações Comerciais & Ações -->
+                <div class="showcase-content">
+                    <div class="showcase-top-meta">
+                        <span class="card-category-badge">${project.category || 'Engenharia de Software'}</span>
+                        <span class="card-status-badge">
+                            <span class="badge-dot" style="background-color: #10b981; box-shadow: none;"></span>
+                            Em Produção
                         </span>
+                    </div>
+
+                    <h3 class="showcase-title">${project.name}</h3>
+                    <p class="showcase-desc">${project.description}</p>
+                    
+                    ${highlightsHtml ? `<ul class="showcase-highlights">${highlightsHtml}</ul>` : ''}
+
+                    <div class="showcase-tech-tags">
+                        ${techTagsHtml}
+                    </div>
+
+                    <div class="showcase-actions">
+                        <a href="${getWhatsAppLink(waCustomMsg)}" target="_blank" class="btn btn-primary btn-glow btn-sm">
+                            <svg class="icon-whatsapp" width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.514 2.266 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.5-5.739-1.446L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.42 9.864-9.864.002-2.637-1.03-5.114-2.903-6.989-1.873-1.873-4.351-2.903-6.99-2.905-5.442 0-9.87 4.42-9.874 9.86-.001 1.748.473 3.456 1.378 4.969L1.925 21.647l5.986-1.569c.003-.002.003-.002.003-.002zm12.366-7.41c-.327-.163-1.924-.949-2.217-1.055-.293-.105-.507-.157-.719.163-.213.32-.821 1.055-1.007 1.266-.187.21-.373.237-.7.074-.326-.163-1.379-.508-2.625-1.62-1.026-.914-1.719-2.043-1.92-2.37-.201-.326-.021-.502.142-.663.147-.145.327-.379.49-.569.163-.19.217-.326.326-.543.11-.217.055-.407-.027-.57-.082-.163-.718-1.727-.984-2.37-.26-.624-.523-.538-.72-.548-.18-.01-.387-.01-.594-.01s-.54.077-.822.387c-.282.31-1.077 1.051-1.077 2.562 0 1.511 1.099 2.973 1.252 3.178.153.204 2.164 3.31 5.242 4.643.732.316 1.303.505 1.748.647.736.233 1.408.2 1.938.12.59-.09 1.925-.788 2.197-1.509.272-.72.272-1.336.192-1.464-.08-.128-.293-.21-.62-.373z"/></svg>
+                            Solicitar no WhatsApp
+                        </a>
+                        <button type="button" class="btn btn-secondary btn-sm btn-open-modal">
+                            Ver Detalhes & Tela Cheia
+                        </button>
                     </div>
                 </div>
             `;
 
-            card.addEventListener('click', () => {
+            // Cliques para abrir o modal de tela inteira
+            card.querySelector('.showcase-media-stage').addEventListener('click', (e) => {
+                e.stopPropagation();
+                openProjectDetailsModal(project);
+            });
+            card.querySelector('.btn-open-modal').addEventListener('click', (e) => {
+                e.stopPropagation();
                 openProjectDetailsModal(project);
             });
 
@@ -456,12 +457,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    if (searchRepoInput) {
-        searchRepoInput.addEventListener('input', renderPortfolio);
-    }
-
     // ----------------------------------------------------------------------
-    // 5. MODAL DE DETALHES DO PROJETO (SEM EMOJIS, FOTO REAL E WHATSAPP)
+    // 5. MODAL DE DETALHES DO PROJETO (SPLIT SCREEN - FOTO REAL INTEIRA)
     // ----------------------------------------------------------------------
     const projectModalOverlay = document.getElementById('projectModalOverlay');
     const closeProjectModal = document.getElementById('closeProjectModal');
@@ -473,17 +470,18 @@ document.addEventListener('DOMContentLoaded', () => {
         if (project.image) {
             modalCoverImg.src = project.image;
             modalCoverImg.style.display = 'block';
-            modalCoverGradient.style.display = 'none';
+            if (modalCoverGradient) modalCoverGradient.style.display = 'none';
         } else {
             modalCoverImg.style.display = 'none';
-            modalCoverGradient.style.display = 'block';
-            modalCoverGradient.style.background = `radial-gradient(circle at top right, rgba(0, 240, 255, 0.25), rgba(13, 14, 23, 0.95))`;
+            if (modalCoverGradient) modalCoverGradient.style.display = 'flex';
         }
 
-        document.getElementById('modalCoverBadge').textContent = project.category || 'Engenharia de Software';
+        const badge = document.getElementById('modalCoverBadge');
+        if (badge) badge.textContent = project.category || 'Engenharia de Software';
+
         document.getElementById('modalTitle').textContent = project.name;
         document.getElementById('modalCategory').textContent = project.category || 'Sistema TECX';
-        document.getElementById('modalStatus').textContent = project.status || 'Em Produção';
+        document.getElementById('modalStatus').textContent = 'Em Produção';
         document.getElementById('modalDescription').textContent = project.description;
 
         const highlightsList = document.getElementById('modalHighlightsList');
@@ -509,7 +507,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Botão CTA para o WhatsApp configurado do usuário
-        const waMsg = `Olá TECX SISTEMAS! Gostei do projeto *${project.name}* e gostaria de solicitar um orçamento para uma solução semelhante para o meu negócio.`;
+        const waMsg = `Olá TECX SISTEMAS! Gostei da demonstração do projeto *${project.name}* e gostaria de solicitar um orçamento para uma solução semelhante para o meu negócio.`;
         const modalWaBtn = document.getElementById('modalWhatsappCta');
         if (modalWaBtn) {
             modalWaBtn.href = getWhatsAppLink(waMsg);
