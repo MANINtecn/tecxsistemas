@@ -541,6 +541,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Fechamento via Tecla Escape para acessibilidade
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            closeDetailsModal();
+            if (typeof closeAdminModalFunc === 'function') closeAdminModalFunc();
+            if (typeof closeDrawerFunc === 'function') closeDrawerFunc();
+        }
+    });
+
 
     // ----------------------------------------------------------------------
     // 6. SEÇÃO DE ORÇAMENTO COM CAMPO DE TEXTO E ENVIO DIRETO AO WHATSAPP

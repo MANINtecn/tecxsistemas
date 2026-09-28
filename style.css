@@ -932,17 +932,7 @@ section {
     margin-top: 8px;
 }
 
-/* Responsividade dos Cards Showcase */
-@media (max-width: 980px) {
-    .portfolio-showcase-card {
-        grid-template-columns: 1fr;
-        gap: 24px;
-        padding: 20px;
-    }
-    .showcase-media-stage {
-        height: 380px;
-    }
-}
+
 
 /* Skeleton Shimmer Loading Effeect */
 .skeleton-card {
@@ -1426,126 +1416,6 @@ section {
     font-weight: 500;
 }
 
-/* ==========================================================================
-   RESPONSIVENESS & MEDIA QUERIES (MOBILE FIRST COMPLIANT)
-   ========================================================================== */
-
-@media (max-width: 992px) {
-    .hero-container {
-        grid-template-columns: 1fr;
-        gap: 50px;
-        text-align: center;
-    }
-
-    .hero-content {
-        align-items: center;
-    }
-
-    .hero-title {
-        font-size: 2.8rem;
-    }
-
-    .hero-stats {
-        justify-content: center;
-    }
-
-    .hero-ctas {
-        justify-content: center;
-    }
-
-    .budget-wrapper {
-        grid-template-columns: 1fr;
-    }
-
-    .budget-info {
-        border-right: none;
-        border-bottom: 1px solid var(--border-color);
-        padding: 40px;
-    }
-
-    .budget-calculator {
-        padding: 40px;
-    }
-
-    .contact-grid {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr repeat(3, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .main-nav {
-        display: none;
-    }
-
-    .menu-toggle {
-        display: flex;
-    }
-
-    .header-actions .btn {
-        display: none; /* Hide header simulating button on very small screens to fit drawer button */
-    }
-
-    .section-title {
-        font-size: 2.1rem;
-    }
-
-    .portfolio-controls {
-        grid-template-columns: 1fr;
-        padding: 20px;
-    }
-
-    .form-row {
-        grid-template-columns: 1fr;
-        gap: 0;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 30px;
-    }
-
-    .footer-brand-column {
-        grid-column: 1 / -1;
-    }
-
-    .footer-bottom-container {
-        flex-direction: column;
-        gap: 12px;
-        text-align: center;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero-title {
-        font-size: 2.2rem;
-    }
-
-    .hero-ctas {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .hero-ctas .btn {
-        width: 100%;
-    }
-
-    .project-types-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .calculator-actions {
-        flex-direction: column;
-    }
-
-    .footer-grid {
-        grid-template-columns: 1fr;
-    }
-}
 
 /* ==========================================================================
    MODAL SYSTEMS: PROJECT DETAIL & PORTFOLIO ADMIN
@@ -1702,26 +1572,6 @@ section {
     gap: 20px;
 }
 
-@media (max-width: 900px) {
-    .project-modal.split-modal {
-        grid-template-columns: 1fr;
-        max-height: 92vh;
-        overflow-y: auto;
-    }
-    .modal-media-col {
-        border-right: none;
-        border-bottom: 1px solid var(--border-color);
-        min-height: 340px;
-        padding: 24px 16px;
-    }
-    .modal-cover-img {
-        max-height: 52vh;
-    }
-    .project-modal .modal-body {
-        padding: 28px 20px;
-        max-height: none;
-    }
-}
 
 .modal-header-meta {
     display: flex;
@@ -2228,4 +2078,747 @@ input:checked + .slider-toggle:before {
 
 .btn-text:hover {
     color: var(--text-primary);
+}
+
+/* ==========================================================================
+   MASTER RESPONSIVE ARCHITECTURE (MOBILE-FIRST POLISH & VIEWPORTS)
+   ========================================================================== */
+
+/* --- Mobile Global & Reset Adjustments --- */
+html, body {
+    overflow-x: hidden !important;
+    width: 100%;
+    max-width: 100vw;
+    -webkit-text-size-adjust: 100%;
+    touch-action: manipulation;
+}
+
+/* Ensure no background ambient glow expands viewport width */
+.ambient-glow {
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+/* --- Breakpoint: Laptops & Tablets Landscape (<= 1024px) --- */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .portfolio-showcase-card {
+        grid-template-columns: 380px 1fr;
+        gap: 28px;
+        padding: 24px;
+    }
+
+    .showcase-media-stage {
+        height: 400px;
+    }
+
+    .budget-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .budget-info {
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        padding: 44px 36px;
+    }
+
+    .budget-calculator {
+        padding: 44px 36px;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .project-modal.split-modal {
+        grid-template-columns: 1fr;
+        max-width: 94vw;
+        max-height: 92vh;
+        overflow-y: auto;
+    }
+
+    .modal-media-col {
+        border-right: none;
+        border-bottom: 1px solid var(--border-color);
+        min-height: 320px;
+        padding: 24px 20px;
+    }
+
+    .modal-cover-img {
+        max-height: 48vh;
+    }
+
+    .project-modal .modal-body {
+        padding: 32px 24px;
+        max-height: none;
+        overflow: visible;
+    }
+}
+
+/* --- Breakpoint: Tablets Portrait & Large Smartphones (<= 868px) --- */
+@media (max-width: 868px) {
+    :root {
+        --header-height: 68px;
+    }
+
+    .main-header {
+        height: var(--header-height);
+    }
+
+    .main-header.scrolled {
+        height: 60px;
+    }
+
+    .logo {
+        font-size: 1.3rem;
+    }
+
+    .main-nav {
+        display: none !important;
+    }
+
+    .menu-toggle {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .header-actions .btn {
+        display: none; /* Mantém cabeçalho limpo no mobile com foco no menu drawer */
+    }
+
+    .portfolio-showcase-card {
+        grid-template-columns: 1fr;
+        gap: 22px;
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .showcase-media-stage {
+        height: 350px;
+    }
+
+    .showcase-full-img {
+        max-height: 320px;
+    }
+
+    .showcase-title {
+        font-size: 1.45rem;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 36px;
+    }
+
+    .footer-brand-column {
+        grid-column: 1 / -1;
+    }
+}
+
+/* --- Breakpoint: Standard Mobile Smartphones (<= 640px) --- */
+@media (max-width: 640px) {
+    /* Fluid Section Spacing */
+    section {
+        padding: 56px 0;
+    }
+
+    .container {
+        padding: 0 16px;
+    }
+
+    .section-header {
+        margin-bottom: 34px;
+    }
+
+    .section-tagline {
+        font-size: 0.78rem;
+        margin-bottom: 8px;
+    }
+
+    .section-title {
+        font-size: 1.85rem;
+        line-height: 1.22;
+        margin-bottom: 12px;
+    }
+
+    .section-subtitle {
+        font-size: 0.92rem;
+        line-height: 1.55;
+    }
+
+    /* Hero Section Mobile */
+    .hero-section {
+        padding-top: calc(var(--header-height) + 16px);
+        padding-bottom: 44px;
+    }
+
+    .badge-tech {
+        font-size: 0.72rem;
+        padding: 6px 14px;
+        margin-bottom: 16px;
+        max-width: 100%;
+        text-align: center;
+        letter-spacing: 0.04em;
+    }
+
+    .hero-title {
+        font-size: clamp(1.9rem, 7.8vw, 2.5rem);
+        line-height: 1.18;
+        margin-bottom: 16px;
+        letter-spacing: -0.025em;
+    }
+
+    .hero-subtitle {
+        font-size: 0.96rem;
+        line-height: 1.58;
+        margin-bottom: 24px;
+        padding: 0 4px;
+    }
+
+    .hero-ctas {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .hero-ctas .btn {
+        width: 100%;
+        padding: 15px 22px;
+        font-size: 0.98rem;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+
+    /* Hero Stats Grid (Organizado em 3 colunas compactas e elegantes) */
+    .hero-stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        width: 100%;
+        margin-top: 32px;
+        padding-top: 24px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .stat-item {
+        padding: 0 4px;
+    }
+
+    .stat-num {
+        font-size: 1.45rem;
+        line-height: 1.1;
+    }
+
+    .stat-label {
+        font-size: 0.64rem;
+        letter-spacing: 0.02em;
+        margin-top: 4px;
+        text-align: center;
+    }
+
+    /* Services Section Mobile */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .service-card {
+        padding: 24px 20px;
+        border-radius: 18px;
+    }
+
+    .service-icon-wrapper {
+        width: 46px;
+        height: 46px;
+        margin-bottom: 20px;
+    }
+
+    .service-title {
+        font-size: 1.22rem;
+        margin-bottom: 12px;
+    }
+
+    .service-description {
+        font-size: 0.9rem;
+        line-height: 1.55;
+        margin-bottom: 18px;
+    }
+
+    .service-features li {
+        font-size: 0.82rem;
+    }
+
+    /* Portfolio Showcase Cards Mobile */
+    .portfolio-grid {
+        gap: 24px;
+    }
+
+    .portfolio-showcase-card {
+        padding: 16px;
+        border-radius: 18px;
+        gap: 16px;
+    }
+
+    .showcase-media-stage {
+        height: 300px;
+        padding: 12px;
+        border-radius: 14px;
+    }
+
+    .showcase-full-img {
+        max-height: 276px;
+        border-radius: 10px;
+    }
+
+    .showcase-badge-overlay {
+        top: 12px;
+        left: 12px;
+    }
+
+    .showcase-zoom-hint {
+        bottom: 12px;
+        right: 12px;
+        font-size: 0.7rem;
+        padding: 5px 12px;
+    }
+
+    .showcase-content {
+        gap: 14px;
+        padding: 4px 0 0 0;
+    }
+
+    .showcase-title {
+        font-size: 1.35rem;
+        line-height: 1.25;
+    }
+
+    .showcase-desc {
+        font-size: 0.88rem;
+        line-height: 1.55;
+    }
+
+    .showcase-highlights {
+        padding: 12px 14px;
+        gap: 7px;
+        border-radius: 10px;
+    }
+
+    .showcase-highlights li {
+        font-size: 0.82rem;
+        gap: 8px;
+    }
+
+    .showcase-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        margin-top: 6px;
+    }
+
+    .showcase-actions .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 13px 20px;
+        font-size: 0.92rem;
+    }
+
+    /* Split Modal (Visualizador de App em Celular) */
+    .modal-overlay {
+        padding: 12px 8px;
+    }
+
+    .project-modal.split-modal {
+        display: flex;
+        flex-direction: column;
+        width: 96vw;
+        max-height: 94vh;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+
+    .modal-close {
+        top: 12px;
+        right: 12px;
+        width: 38px;
+        height: 38px;
+        font-size: 1.4rem;
+        background: rgba(0, 0, 0, 0.85);
+        border: 1px solid rgba(255, 255, 255, 0.25);
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
+        z-index: 50;
+    }
+
+    .modal-media-col {
+        min-height: 230px;
+        max-height: 38vh;
+        flex-shrink: 0;
+        padding: 14px 12px;
+        background: radial-gradient(circle at center, #10162f 0%, #06070f 100%);
+    }
+
+    .modal-cover-img {
+        max-height: 34vh;
+        max-width: 100%;
+        border-radius: 12px;
+    }
+
+    .project-modal .modal-body {
+        padding: 20px 16px;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        flex: 1;
+        gap: 16px;
+    }
+
+    .modal-title {
+        font-size: 1.32rem;
+        line-height: 1.25;
+    }
+
+    .modal-description {
+        font-size: 0.88rem;
+        line-height: 1.6;
+        margin-bottom: 16px;
+    }
+
+    .modal-highlights {
+        padding: 12px 14px;
+        margin-bottom: 18px;
+    }
+
+    .modal-highlights li {
+        font-size: 0.82rem;
+    }
+
+    .modal-tech-stack {
+        margin-bottom: 20px;
+    }
+
+    .modal-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 10px;
+        padding-top: 14px;
+    }
+
+    .modal-actions .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 20px;
+        font-size: 0.95rem;
+    }
+
+    /* Budget Section Mobile */
+    .budget-wrapper {
+        border-radius: 20px;
+    }
+
+    .budget-info {
+        padding: 28px 18px;
+    }
+
+    .budget-title {
+        font-size: 1.55rem;
+        line-height: 1.25;
+        margin-bottom: 12px;
+    }
+
+    .budget-desc {
+        font-size: 0.9rem;
+        line-height: 1.55;
+        margin-bottom: 24px;
+    }
+
+    .calculator-steps {
+        gap: 16px;
+    }
+
+    .calc-step-item {
+        gap: 12px;
+    }
+
+    .step-badge {
+        width: 28px;
+        height: 28px;
+        font-size: 0.8rem;
+        flex-shrink: 0;
+    }
+
+    .step-text {
+        font-size: 0.85rem;
+    }
+
+    .budget-calculator {
+        padding: 24px 16px;
+        gap: 22px;
+    }
+
+    .project-types-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .type-card {
+        padding: 12px 10px;
+        gap: 8px;
+        border-radius: 12px;
+    }
+
+    .type-icon {
+        font-size: 1.3rem;
+    }
+
+    .type-name {
+        font-size: 0.78rem;
+    }
+
+    .addon-checkbox-label {
+        padding: 12px 14px;
+        border-radius: 10px;
+        gap: 12px;
+    }
+
+    .addon-name {
+        font-size: 0.82rem;
+    }
+
+    .budget-result-panel {
+        padding: 20px 16px;
+        border-radius: 14px;
+    }
+
+    .result-price-range {
+        font-size: 1.85rem;
+        line-height: 1.15;
+    }
+
+    .calculator-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .calc-input {
+        width: 100%;
+        font-size: 16px !important; /* Previne auto-zoom no Safari iOS */
+        padding: 13px 16px;
+        box-sizing: border-box;
+    }
+
+    .calculator-actions .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 20px;
+        font-size: 0.95rem;
+    }
+
+    /* Contact Section Mobile */
+    .contact-grid {
+        gap: 24px;
+    }
+
+    .contact-item-card {
+        padding: 16px 14px;
+        border-radius: 14px;
+        gap: 14px;
+    }
+
+    .contact-icon-bg {
+        width: 42px;
+        height: 42px;
+        flex-shrink: 0;
+    }
+
+    .contact-card-link {
+        font-size: 0.95rem;
+        word-break: break-all;
+    }
+
+    .contact-form-panel {
+        padding: 24px 16px;
+        border-radius: 18px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .form-group {
+        margin-bottom: 18px;
+    }
+
+    .form-label {
+        font-size: 0.82rem;
+    }
+
+    .form-input {
+        font-size: 16px !important; /* Previne auto-zoom no Safari iOS */
+        padding: 13px 16px;
+        border-radius: 10px;
+        box-sizing: border-box;
+    }
+
+    .contact-form-panel .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 20px;
+        font-size: 0.95rem;
+    }
+
+    /* Footer Mobile */
+    .main-footer {
+        padding-top: 56px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .footer-brand-column {
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-desc {
+        text-align: center;
+        font-size: 0.85rem;
+    }
+
+    .social-row {
+        justify-content: center;
+    }
+
+    .footer-links-column {
+        align-items: center;
+        gap: 12px;
+    }
+
+    .footer-title {
+        margin-bottom: 14px;
+        font-size: 0.9rem;
+    }
+
+    .footer-bottom {
+        padding: 22px 0;
+    }
+
+    .footer-bottom-container {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+        font-size: 0.75rem;
+    }
+
+    /* Admin Modal Mobile */
+    .admin-modal {
+        width: 96vw;
+        max-height: 92vh;
+        border-radius: 20px;
+    }
+
+    .admin-header {
+        padding: 16px 20px;
+    }
+
+    .admin-dashboard-view {
+        padding: 20px 16px;
+    }
+
+    .admin-tabs {
+        gap: 8px;
+        overflow-x: auto;
+        padding-bottom: 8px;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .admin-tab {
+        padding: 6px 12px;
+        font-size: 0.78rem;
+        white-space: nowrap;
+    }
+
+    .admin-input-control {
+        font-size: 16px !important;
+    }
+
+    .admin-project-bottom-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    /* Mobile Drawer Polish */
+    .mobile-drawer {
+        width: min(300px, 84vw);
+        padding: 30px 20px;
+    }
+
+    .drawer-link {
+        font-size: 1.05rem;
+        padding: 12px 0;
+    }
+
+    .drawer-cta {
+        width: 100%;
+        text-align: center;
+        padding: 14px 20px;
+    }
+}
+
+/* --- Breakpoint: Extra Small Compact Phones (<= 380px) --- */
+@media (max-width: 380px) {
+    .hero-title {
+        font-size: 1.7rem;
+    }
+
+    .hero-stats {
+        gap: 4px;
+    }
+
+    .stat-num {
+        font-size: 1.25rem;
+    }
+
+    .stat-label {
+        font-size: 0.58rem;
+    }
+
+    .project-types-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .showcase-media-stage {
+        height: 270px;
+    }
+
+    .showcase-full-img {
+        max-height: 246px;
+    }
+
+    .modal-media-col {
+        min-height: 200px;
+        max-height: 35vh;
+    }
+
+    .modal-cover-img {
+        max-height: 30vh;
+    }
+
+    .result-price-range {
+        font-size: 1.55rem;
+    }
 }
